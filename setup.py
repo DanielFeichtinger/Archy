@@ -29,6 +29,8 @@
 #   http://www.python.org/doc/current/dist/
 # -----------------------------------------------------------------
 
+# I add some line to test GitHub Desktop
+
 from distutils.core import setup
 import glob
 import os
