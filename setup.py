@@ -30,6 +30,7 @@
 # -----------------------------------------------------------------
 
 # I add some line to test GitHub Desktop
+# FooBar
 
 from distutils.core import setup
 import glob
