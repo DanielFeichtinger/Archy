@@ -35,18 +35,25 @@ VERSION = "$Id: mac_specific.hpy,v 1.11 2005/04/01 22:22:32 varmaa Exp $"
 # We here establish some accessible constants that key.py will
 # call when establishing keybindings.
 
-Start_LEAP_Forward_Keybinding        = 'left shift\\ space\\'
-End_LEAP_Forward_Keybinding          = 'left shift/'
-LEAP_Forward_Select_Keybinding       = 'right shift\\'
-Start_LEAP_Backward_Keybinding       = 'left shift\\ return\\'
-End_LEAP_Backward_Keybinding         = 'left shift/'
-LEAP_Backward_Select_Keybinding      = 'right shift\\'
+# Start_LEAP_Forward_Keybinding        = 'left shift\\ space\\'
+# End_LEAP_Forward_Keybinding          = 'left shift/'
+# LEAP_Forward_Select_Keybinding       = 'right shift\\'
+# Start_LEAP_Backward_Keybinding       = 'left shift\\ return\\'
+# End_LEAP_Backward_Keybinding         = 'left shift/'
+# LEAP_Backward_Select_Keybinding      = 'right shift\\'
+Start_LEAP_Forward_Keybinding        = 'right meta\\' 
+End_LEAP_Forward_Keybinding          = 'right meta/' 
+LEAP_Forward_Select_Keybinding       = 'left meta\\'
+Start_LEAP_Backward_Keybinding       = 'left meta\\'
+End_LEAP_Backward_Keybinding         = 'left meta/'
+LEAP_Backward_Select_Keybinding      = 'right meta\\'
 
 
-Start_Command_Keybinding             = 'left meta\\'
-End_Command_Keybinding               = 'left meta/'
-#Start_Command_Keybinding             = 'caps lock\\'
-#End_Command_Keybinding               = 'caps lock/'
+
+# Start_Command_Keybinding             = 'left meta\\'
+# End_Command_Keybinding               = 'left meta/'
+Start_Command_Keybinding             = 'caps lock\\'
+End_Command_Keybinding               = 'caps lock/'
 
 Delete_Keybinding                    = 'backspace\\'
 
