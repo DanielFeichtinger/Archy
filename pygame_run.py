@@ -260,7 +260,7 @@ def run_archy():
     process_command_line_arguments()
 
     import debug
-    debug_log = debug.DebugLog('debug.log')
+    debug_log = debug.DebugLog('log/debug.log')
     debug_log.install()
 
     import time

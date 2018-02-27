@@ -1,4 +1,4 @@
-_humane_text*
 *.pyc
-*.log
-*.bak
+tmp/*
+log/*
+.vscode
