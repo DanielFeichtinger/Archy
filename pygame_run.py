@@ -63,6 +63,7 @@ FULLSCREEN_SCREEN_SIZE = None
 screen = None
 mouse_visibility = None
 fullscreen_mode = None
+user_directory = None
 
 # --------------------------
 # Screen drawing
@@ -223,6 +224,7 @@ def init_archy(fullscreenFlag=0):
     screen.fill([255,255,255])
     screen_surface = surfaces.PygameSurface(surface=screen.subsurface([[margin,0], [screen.get_width()-2*margin,screen.get_height()]]))
     archyState.init(screen_surface)
+    print(user_directory)
 
     #Because the text documents have been entirely reinitialized the cursorObserver is no longer registered as an observer. If we want focus events to work (see cursor.py) we need to reregister the cursor observer by reinstantiate it.
     cursorObserver = commands.cursor.CursorObserver()
@@ -317,9 +319,11 @@ def process_command_line_arguments():
 
     parser = optparse.OptionParser()
     parser.add_option("-d", "--developer-mode", action="store_true", dest="developer_mode", default=False, help="invoke archy in developer mode (no web-based bug reporting, etc.)")
+    parser.add_option("-u", "--user-directory", dest="user_directory", default="tmp", help="invoke archy to store user data in the specified directory (default is tmp/)")
     options, args = parser.parse_args()
     import debug
     debug.DEVELOPER_MODE = options.developer_mode
+    archyState.userDirectory = options.user_directory
 
 def main():
     startupServiceThreads()

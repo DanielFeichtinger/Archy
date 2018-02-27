@@ -41,6 +41,7 @@
 
 import commands
 from archy_state import archyState
+from os import path
 
 import cPickle
 
@@ -50,7 +51,7 @@ import cPickle
 
 # This is the filename to which Archy's state information will be stored.
 
-outputFile = 'tmp/Humane Document'
+outputFile = path.join(archyState.userDirectory, 'Humane Document')
 
 # The changeQueue is a list of all the changes that have been made to the state of Archy since it was last incrementally saved.
 
@@ -131,7 +132,7 @@ def decompressList(compressedArray):
 
 TEXT_MAX_BACKUPS = 20
 
-TEXT_BACKUP_PREFIX = "tmp/_humane_text_"
+TEXT_BACKUP_PREFIX = path.join(archyState.userDirectory, "_humane_text_")
 TEXT_BACKUP_SUFFIX = ".txt"
 
 TEXT_BACKUP_FILENAME = "%s%s%s" % (TEXT_BACKUP_PREFIX, "%010d", TEXT_BACKUP_SUFFIX)

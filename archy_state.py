@@ -41,6 +41,7 @@ class ArchyState:
         self.commandHistory = None
         
         self.keyState = None
+        self.userDirectory = None
 
 # This is the primary initialization function that sets up the various text layers.
     def init(self, screen):
