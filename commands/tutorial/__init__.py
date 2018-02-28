@@ -173,7 +173,7 @@ class Movie(threading.Thread):
     def run(self):
         times = self.history.keys()
         times.sort()
-        start_time = time.clock()
+        start_time = time.time()
         elapsed_time = 0.0
 
         keyboard.show()
@@ -188,7 +188,7 @@ class Movie(threading.Thread):
             import pygame_run
             pygame_run.post_tutorial_event(self, event)
 
-            elapsed_time = time.clock() - start_time
+            elapsed_time = time.time() - start_time
         # end for
 
 # At this point, either we've been told by the main Archy thread that we need to quit (meaning that the user has probably pressed a key in the middle of the tutorial), or we've run out of events to dispatch.   If the latter is the case, then we need to wait around for the main Archy thread to tell us to quit.
