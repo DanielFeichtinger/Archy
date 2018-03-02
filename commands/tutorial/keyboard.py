@@ -1,6 +1,7 @@
 import pygame
 KEYBOARD = pygame.image.load('commands/tutorial/keyboard.png')
 KEYBOARD.set_alpha(190)
+import platform_specific
 
 VISIBLE = 0
 SHOWNKEY = ''
@@ -90,9 +91,9 @@ qmap['']        = [(0,0), (0,0)]
 KEYBOARD_POS = [50, 0]
 
 TRANS_TABLE = {}
-TRANS_TABLE['leapf']    = pygame.constants.K_RALT
-TRANS_TABLE['leapb']    = pygame.constants.K_LALT
-TRANS_TABLE['command']  = pygame.constants.K_CAPSLOCK
+TRANS_TABLE['leapf']    = platform_specific.LEAP_Forward_Key
+TRANS_TABLE['leapb']    = platform_specific.LEAP_Backward_Key
+TRANS_TABLE['command']  = platform_specific.Command_Key
 TRANS_TABLE['delete']   = pygame.constants.K_BACKSPACE
 TRANS_TABLE['space']    = ' '
 TRANS_TABLE['return']   = '\n'
