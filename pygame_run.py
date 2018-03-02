@@ -161,7 +161,7 @@ def determine_resolutions():
         # Set fullscreen res to the highest available.
         FULLSCREEN_SCREEN_SIZE = pygame.display.list_modes()[0]
 
-ICON_FILE = "icons/archy_icon_small.png"
+ICON_FILE = "icons/archy.ico"
 
 def set_application_icon():
     icon_img = pygame.image.load( ICON_FILE )
