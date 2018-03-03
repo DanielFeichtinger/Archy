@@ -1,18 +1,5 @@
 # bmh_search.py
-# The Raskin Center for Humane Interfaces (RCHI) 2004
-
-# This work is licensed under the Creative Commons
-# Attribution-NonCommercial-ShareAlike License. To view 
-# a copy of this license, visit 
-# http://creativecommons.org/licenses/by-nc-sa/2.0/ 
-
-# or send a letter to :
-
-# Creative Commons
-# 559 Nathan Abbott Way
-# Stanford, California 94305, 
-# USA.
-# --- --- ---
+# The Raskin Center for Humane Interfaces (RCHI) 2004-2005
 
 VERSION = "$Id: bmh_search.hpy,v 1.6 2005/02/15 23:42:12 bzwebcorp Exp $"
 

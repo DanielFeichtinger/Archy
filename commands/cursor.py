@@ -1,3 +1,6 @@
+# cursor.py
+# The Raskin Center for Humane Interfaces (RCHI) 2004-2005
+
 # Cursor Commands
 
 # This module is intended to implement CREEP and LEAP as commands.  It has direct access to the main text modules, and sets selections directly.

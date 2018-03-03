@@ -1,3 +1,6 @@
+# keyboard.py
+# The Raskin Center for Humane Interfaces (RCHI) 2004-2005
+
 import pygame
 KEYBOARD = pygame.image.load('commands/tutorial/keyboard.png')
 KEYBOARD.set_alpha(190)

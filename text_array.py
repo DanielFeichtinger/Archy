@@ -1,18 +1,5 @@
 # text_array.py
-# The Raskin Center for Humane Interfaces (RCHI) 2004
-
-# This work is licensed under the Creative Commons
-# Attribution-NonCommercial-ShareAlike License. To view 
-# a copy of this license, visit 
-# http://creativecommons.org/licenses/by-nc-sa/2.0/ 
-
-# or send a letter to :
-
-# Creative Commons
-# 559 Nathan Abbott Way
-# Stanford, California 94305, 
-# USA.
-# --- --- ---
+# The Raskin Center for Humane Interfaces (RCHI) 2004-2005
 
 VERSION = "$Id: text_array.hpy,v 1.16 2005/02/10 23:06:51 andrewwwilson Exp $"
 
