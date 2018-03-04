@@ -438,7 +438,7 @@ class CommandEntry(KeyboardState):
                     if keystroke == platform_specific.Start_LEAP_Backward_Keybinding:
                         self.lastLeapBackward()
                         return
-            upper_char_code = unicode.upper()
+            upper_char_code = unichr(keycode).upper()
             self.commandText += upper_char_code
             
             self._removeSuggestion()
@@ -520,16 +520,16 @@ class LeapBase(KeyboardState):
                 self.playFailedLeapSound()
 
     def keypress(self, keycode, unicode, action):
-
+        unicode_from_key = unichr(keycode)
         if action == DOWN:
-            if unicode == u"":
+            if unicode_from_key == u"":
                 return
             if self.parent.left_shift == DOWN or self.parent.right_shift == DOWN:
-                unicode = archy_globals.apply_shift_key_to_character(unicode)
+                unicode_from_key = archy_globals.apply_shift_key_to_character(unicode_from_key)
 
-            messages.addToMessage(unicode, 'leap')
+            messages.addToMessage(unicode_from_key, 'leap')
             try:
-                self.leapCommand.addChar(unicode)
+                self.leapCommand.addChar(unicode_from_key)
                 if self.leapCommand.status() == 0:
                     # I do not think an addChar can result in a 0 length target but
                     # it will not hurt to check here. -Han
