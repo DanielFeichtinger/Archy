@@ -10,9 +10,23 @@ VERSION = "$Id: mac_specific.hpy,v 1.11 2005/04/01 22:22:32 varmaa Exp $"
 # Clipboard
 # --------------------------
 
-# Currently, we're inheriting the wxPython clipboard routines from
-# generic_os, but feel free to add an implementation here that doesn't
-# require wxWindows (if one exists).
+# MacOS clipboard integration without dependencies, taken from
+# http://www.macdrifter.com/2011/12/python-and-the-mac-clipboard.html
+
+import subprocess
+
+def getClipboard():
+    p = subprocess.Popen(['pbpaste'], stdout=subprocess.PIPE)
+    retcode = p.wait()
+    data = p.stdout.read()
+    return data
+
+def setClipboard(data):
+    p = subprocess.Popen(['pbcopy'], stdin=subprocess.PIPE)
+    p.stdin.write(data)
+    p.stdin.close()
+    retcode = p.wait()
+
 
 # --------------------------
 # Key bindings
