@@ -98,6 +98,8 @@ def handle_event(e):
             platform_specific.unstickCapsLock()
         
         keyChar = e.unicode.replace('\r', '\n')
+        if e.key == ord('\r'):
+            e.key = ord('\n')
         archyState.autorepeater.onKeyDown(e.key, keyChar)
 
     elif e.type == KEYUP:

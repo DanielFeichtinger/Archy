@@ -195,6 +195,12 @@ class KeyboardState:
             action()
             return 1
         return 0
+    
+    # Check if keycode is printable -- useful when binding
+    # LEAP or Command keys to a native modifier keys like
+    # Alt or Ctrl
+    def printable(self, keycode):
+        return (keycode >= ord('\n') and keycode <= ord('z'))
 
 # --- --- ---
 # A Note on Defining the bindings for a KeyBindings class and KeyboardState classes
@@ -439,11 +445,12 @@ class CommandEntry(KeyboardState):
                         self.lastLeapBackward()
                         return
             upper_char_code = unichr(keycode).upper()
-            self.commandText += upper_char_code
-            
-            self._removeSuggestion()
-            messages.addToMessage( upper_char_code, 'command' )
-            self._addSuggestion()
+            if self.printable(keycode):
+                self.commandText += upper_char_code
+
+                self._removeSuggestion()
+                messages.addToMessage( upper_char_code, 'command' )
+                self._addSuggestion()
 
 # --------------------------
 # The LEAP Quasimodes
@@ -521,7 +528,8 @@ class LeapBase(KeyboardState):
 
     def keypress(self, keycode, unicode, action):
         unicode_from_key = unichr(keycode)
-        if action == DOWN:
+        print(keycode, unicode, unicode_from_key)
+        if action == DOWN and self.printable(keycode):
             if unicode_from_key == u"":
                 return
             if self.parent.left_shift == DOWN or self.parent.right_shift == DOWN:
