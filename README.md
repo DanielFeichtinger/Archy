@@ -1,5 +1,7 @@
 # Archy README
 
+![Preview image of Archy](archy.png)
+
 This is an archive of [Archy](https://en.wikipedia.org/wiki/Archy)
 with some minor bug fixes and tweaks, some universal and some
 specific to running on a modern MacOS. Note: I haven't had a chance
@@ -9,9 +11,13 @@ The main changes are:
 
 * Quasimodes ignore unicode characters, which allows for the
   Alt and Control keys to be used for leap and command entry
-  on MacOS (may break on non-qwerty keyboards)
+  on MacOS (may break on non-qwerty keyboards). These are set
+  as the default, although note that the inline documentation
+  still refers to the Windows bindings
 * Dependency free integration with the MacOS clipboard
-* Pass the directory to save document as an argument with `-u`
+* Logs and the user document are stored in their own directories.
+  You can pass the a fully-qualified directory to save the 
+  user document as an argument with `-u`
 * Fixed the timing of the tutorials on non-Windows systems
 * Readme converted to Markdown
 * Relicensed to the MIT License [as per Tweet](https://twitter.com/aza/status/935282784423223296)
