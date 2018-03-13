@@ -1,6 +1,20 @@
 # Archy README
 
-Archy from RaskinCenter.org WebArchive 
+This is an archive of [Archy](https://en.wikipedia.org/wiki/Archy)
+with some minor bug fixes and tweaks, some universal and some
+specific to running on a modern MacOS. Note: I haven't had a chance
+to test on other platforms so some of the fixes may be MacOS specific.
+
+The main changes are:
+
+* Quasimodes ignore unicode characters, which allows for the
+  Alt and Control keys to be used for leap and command entry
+  on MacOS (may break on non-qwerty keyboards)
+* Dependency free integration with the MacOS clipboard
+* Pass the directory to save document as an argument with `-u`
+* Fixed the timing of the tutorials on non-Windows systems
+* Readme converted to Markdown
+* Relicensed to the MIT License [as per Tweet](https://twitter.com/aza/status/935282784423223296)
 
 ## Sections
 
